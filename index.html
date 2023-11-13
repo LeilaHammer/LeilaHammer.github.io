@@ -14,24 +14,33 @@
             padding: 0; /* Remove default padding */
         }
 
-        figure {
+        main {
             text-align: center;
-            margin: 20px;
+            padding: 50px;
         }
 
-        figcaption {
-            background-color: #333; /* Dark gray background for titles */
-            padding: 10px;
-            font-size: 18px;
+        h1 {
+            font-size: 36px;
             font-weight: bold;
-            margin-bottom: 10px;
         }
 
-        iframe {
-            width: 100%;
-            height: 373.5px;
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to iframes */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
@@ -39,26 +48,35 @@
 
 <body>
 
-    <figure>
-        <figcaption>Salaries Dashboard</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-    </figure>
+    <main>
+        <h1>Leila Hammer Projects</h1>
+        <p> My projects focus on transforming raw data into insightful visualizations, I enjoy creating dynamic and interactive dashboards. Click the button below to view my projects.</p>
+        <button onclick="window.location.href='#projects'">Projects</button>
+    </main>
 
-    <figure>
-        <figcaption>Wine Sales Analytics</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-    </figure>
+    <section id="projects">
+        <figure>
+            <figcaption>Salaries Dashboard</figcaption>
+            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        </figure>
 
-    <figure>
-        <figcaption>Mobile Access Visual</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-    </figure>
+        <figure>
+            <figcaption>Wine Sales Analytics</figcaption>
+            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        </figure>
 
-    <figure>
-        <figcaption>Customer Demographics Dashboard</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-    </figure>
+        <figure>
+            <figcaption>Mobile Access</figcaption>
+            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        </figure>
+
+        <figure>
+            <figcaption>Customer Demographics</figcaption>
+            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        </figure>
+    </section>
 
 </body>
 
 </html>
+
