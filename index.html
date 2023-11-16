@@ -47,25 +47,28 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* LinkedIn Button Styling */
-        .linkedin-button {
+        /* Social Media Buttons Styling */
+        .social-buttons {
             position: fixed;
             top: 20px;
             left: 20px;
             z-index: 999;
+            display: flex;
+            gap: 10px;
         }
 
-        .linkedin-button img {
+        .social-buttons a img {
             width: 40px; /* Adjust the size as needed */
             height: auto;
             border-radius: 5px;
             cursor: pointer;
         }
 
-        .linkedin-button img:hover {
+        .social-buttons a img:hover {
             opacity: 0.8; /* Darken the logo on hover */
         }
 
+        /* Back to Top Button Styling */
         button {
             background-color: #f50a7f;
             color: #fff;
@@ -85,10 +88,15 @@
 
 <body>
 
-    <!-- LinkedIn Button -->
-    <div class="linkedin-button">
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <!-- LinkedIn Button -->
         <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+        </a>
+        <!-- Email Button -->
+        <a href="mailto:leilahammer2000@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
         </a>
     </div>
 
