@@ -47,6 +47,26 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* LinkedIn Button Styling */
+        .linkedin-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        .linkedin-button img {
+            width: 40px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .linkedin-button img:hover {
+            opacity: 0.8; /* Darken the logo on hover */
+        }
+
         button {
             background-color: #f50a7f;
             color: #fff;
@@ -54,28 +74,11 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 20px; /* Add space above the button */
         }
 
         button:hover {
             background-color: #d4076b;
-        }
-
-        /* LinkedIn Button Styling */
-        .social-media-button {
-            margin-top: 20px;
-        }
-
-        .social-media-button button {
-            background-color: #0077B5; /* LinkedIn blue color */
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .social-media-button button:hover {
-            background-color: #005580; /* Darker blue on hover */
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
@@ -120,9 +123,9 @@
     </figure>
 
     <!-- LinkedIn Button -->
-    <div class="social-media-button">
+    <div class="linkedin-button">
         <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
-            <button>Linkedin</button>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
         </a>
     </div>
 
@@ -139,3 +142,4 @@
 </body>
 
 </html>
+
