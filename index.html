@@ -7,23 +7,23 @@
     <title>Leila Hammer Projects</title>
     <style>
         body {
-            background-color: #1a1a1a; /* Dark background color for dark mode */
-            color: #fff; /* Light text color */
-            font-family: 'Montserrat', sans-serif; /* Montserrat font */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            text-align: center; /* Center-align text in the body */
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
         h1 {
-            color: #f50a7f; /* text color for the title */
-            margin-top: 50px; /* Add space above the title */
+            color: #f50a7f;
+            margin-top: 50px;
         }
 
         p {
-            color: #ff69b4; /* text color for the description */
+            color: #ff69b4;
             font-size: 16px;
-            margin-bottom: 30px; /* Add space below the description */
+            margin-bottom: 30px;
         }
 
         figure {
@@ -32,8 +32,8 @@
         }
 
         figcaption {
-            background-color: #333; /* Dark gray background for titles */
-            color: #f50a7f; /* text color for captions */
+            background-color: #333;
+            color: #f50a7f;
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
@@ -44,20 +44,38 @@
             width: 100%;
             height: 373.5px;
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to iframes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         button {
-            background-color: #f50a7f; /* Pink background color for the button */
-            color: #fff; /* White text color */
-            padding: 10px 20px; /* Add some padding to the button */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Add border radius for rounded corners */
-            cursor: pointer; /* Change cursor to pointer on hover */
+            background-color: #f50a7f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         button:hover {
-            background-color: #d4076b; /* Darker pink on hover */
+            background-color: #d4076b;
+        }
+
+        /* LinkedIn Button Styling */
+        .social-media-button {
+            margin-top: 20px;
+        }
+
+        .social-media-button button {
+            background-color: #0077B5; /* LinkedIn blue color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social-media-button button:hover {
+            background-color: #005580; /* Darker blue on hover */
         }
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
@@ -66,7 +84,7 @@
 <body>
 
     <h1>Dummy Data Projects</h1>
-    
+
     <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
 
     <p>Leila Hammer</p>
@@ -74,19 +92,19 @@
     <figure>
         <figcaption>✽Salary Analysis Dashboard✽</figcaption>
         <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Assess salary data through key demographics.</p>    
+        <p>Assess salary data through key demographics.</p>
     </figure>
 
     <figure>
         <figcaption>✽Wine Sales Analytics✽</figcaption>
         <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Insights on wine sales data by country.</p> 
+        <p>Insights on wine sales data by country.</p>
     </figure>
 
     <figure>
         <figcaption>✽Mobile Access Visual✽</figcaption>
         <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Representation of mobile access patterns by country.</p> 
+        <p>Representation of mobile access patterns by country.</p>
     </figure>
 
     <figure>
@@ -101,19 +119,23 @@
         <p>Assess credit risk through key demographics.</p>
     </figure>
 
+    <!-- LinkedIn Button -->
+    <div class="social-media-button">
+        <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
+            <button>LinkedIn</button>
+        </a>
+    </div>
+
     <!-- Back to Top Button -->
     <button onclick="scrollToTop()">Back to Top</button>
 
     <script>
         function scrollToTop() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 
 </body>
 
 </html>
-
-
-
