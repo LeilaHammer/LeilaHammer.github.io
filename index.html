@@ -7,12 +7,15 @@
     <title>Leila Hammer Projects</title>
     <style>
         body {
-            background-color: #1a1a1a;
-            color: #fff;
-            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #fff;
         }
 
         h1 {
@@ -58,14 +61,14 @@
         }
 
         .social-buttons a img {
-            width: 40px; /* Adjust the size as needed */
+            width: 40px;
             height: auto;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .social-buttons a img:hover {
-            opacity: 0.8; /* Darken the logo on hover */
+            opacity: 0.8;
         }
 
         /* Back to Top Button Styling */
@@ -76,10 +79,33 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px; /* Add space above the button */
+            margin-top: 20px;
         }
 
         button:hover {
+            background-color: #d4076b;
+        }
+
+        /* Dark Mode / Light Mode Toggle Button Styling */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            gap: 10px;
+        }
+
+        .mode-toggle button {
+            background-color: #f50a7f;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mode-toggle button:hover {
             background-color: #d4076b;
         }
     </style>
@@ -87,6 +113,12 @@
 </head>
 
 <body>
+
+    <!-- Dark Mode / Light Mode Toggle Buttons -->
+    <div class="mode-toggle">
+        <button onclick="toggleMode('dark')">Dark Mode</button>
+        <button onclick="toggleMode('light')">Light Mode</button>
+    </div>
 
     <!-- Social Media Buttons -->
     <div class="social-buttons">
@@ -144,7 +176,17 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        function toggleMode(mode) {
+            const body = document.body;
+            body.classList.toggle('dark-mode', mode === 'dark');
+        }
     </script>
+
+</body>
+
+</html>
+
 
 </body>
 
