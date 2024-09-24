@@ -28,7 +28,8 @@
 
         figure {
             text-align: center;
-            margin: 20px;
+            margin: 20px auto; /* Center the figure */
+            max-width: 90%; /* Prevents from stretching too wide */
         }
 
         figcaption {
@@ -37,12 +38,14 @@
             padding: 10px;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: center;
         }
 
         iframe {
             width: 100%;
-            height: 373.5px;
+            max-width: 800px; /* Sets a maximum width */
+            height: 450px; /* Maintains aspect ratio */
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -91,9 +94,9 @@
     <!-- Social Media Buttons -->
     <div class="social-buttons">
 
-             <a href="https://github.com/LeilaHammer" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="40" height="40">
-</a>
+        <a href="https://github.com/LeilaHammer" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="40" height="40">
+        </a>
         <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
         </a>
@@ -128,34 +131,33 @@
 
     <figure>
         <figcaption>✽Customer Demographics Dashboard✽</figcaption>
-      <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
         <p>Demographic data for better customer understanding.</p>
     </figure>
 
     <figure>
         <figcaption>✽Credit Risk Charts✽</figcaption>
-     <iframe src="https://app.powerbi.com/reportEmbed?reportId=3cb9597e-8a5b-415f-82e8-eb1daecaad19&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe src="https://app.powerbi.com/reportEmbed?reportId=3cb9597e-8a5b-415f-82e8-eb1daecaad19&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
         <p>Assess credit risk through key demographics.</p>
     </figure>
 
-        <figure>
+    <figure>
         <figcaption>✽Air B&B✽</figcaption>
-       <iframe src="https://app.powerbi.com/reportEmbed?reportId=ffa64c3e-528b-4c16-981e-627e1da40dba&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
-        <p> The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
+        <iframe src="https://app.powerbi.com/reportEmbed?reportId=ffa64c3e-528b-4c16-981e-627e1da40dba&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
+        <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
     </figure>
     
     <figure>
         <figcaption>✽Air B&B✽</figcaption>
-      <iframe src="https://app.powerbi.com/reportEmbed?reportId=d5896041-6956-435c-a3d3-f2e357192192&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
-        <p> This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
+        <iframe src="https://app.powerbi.com/reportEmbed?reportId=d5896041-6956-435c-a3d3-f2e357192192&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
+        <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
     </figure>
     
     <figure>
         <figcaption>✽Air B&B✽</figcaption>
-     <iframe src="https://app.powerbi.com/reportEmbed?reportId=1cd354ac-3f65-4668-9e38-77e4e7fbc9de&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
-        <p> This graph is a key tool for evaluating host performance revealing correlations between review counts and popularity. </p>
+        <iframe src="https://app.powerbi.com/reportEmbed?reportId=1cd354ac-3f65-4668-9e38-77e4e7fbc9de&autoAuth=true&ctid=0504f721-d451-402b-b884-381428559e39" frameborder="0" allowFullScreen="true"></iframe>
+        <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
     </figure>
-
 
     <!-- Back to Top Button -->
     <button onclick="scrollToTop()">Back to Top</button>
@@ -170,3 +172,4 @@
 </body>
 
 </html>
+
