@@ -26,13 +26,27 @@
             margin-bottom: 30px;
         }
 
-        figure {
-            text-align: center;
-            margin: 20px auto; /* Center the figure */
-            max-width: 90%; /* Prevents from stretching too wide */
+        .visualization-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
         }
 
-        figcaption {
+        .legend, .map {
+            max-width: 50%;
+            padding: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .map figcaption {
             background-color: #333;
             color: #E6DBD0;
             padding: 10px;
@@ -40,17 +54,9 @@
             font-weight: bold;
             margin-top: 10px;
             text-align: center;
+            border-radius: 8px;
         }
 
-        iframe {
-            width: 100%;
-            max-width: 800px; /* Sets a maximum width */
-            height: 450px; /* Maintains aspect ratio */
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Social Media Buttons Styling */
         .social-buttons {
             position: fixed;
             top: 20px;
@@ -65,15 +71,14 @@
             height: auto;
             border-radius: 5px;
             cursor: pointer;
-            filter: brightness(70%); /* Makes the icon a lighter grey */
+            filter: brightness(70%);
         }
 
         .social-buttons a img:hover {
             opacity: 0.8;
-            filter: brightness(90%); /* Lightens the grey further on hover */
+            filter: brightness(90%);
         }
 
-        /* Back to Top Button Styling */
         button {
             background-color: #6fd941;
             color: #E6DBD0;
@@ -95,71 +100,63 @@
 
     <!-- Social Media Buttons -->
     <div class="social-buttons">
-
         <a href="https://github.com/LeilaHammer" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="40" height="40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
         </a>
         <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
         </a>
-      
         <a href="mailto:leilahammer2000@gmail.com" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
         </a>
-  
     </div>
 
-    <h1>Dummy Data Projects</h1>
+    <h1>Thesis Visualizations</h1>
+    <p>Preliminary visualizations created with Python in Jupyter Notebooks.</p>
 
-    <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
+    <!-- Coal Visualization -->
+    <div class="visualization-container">
+        <div class="legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/coal_legend.png" alt="Coal Production Legend">
+        </div>
+        <figure class="map">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/coal_production_map_blue.png" alt="Coal Production Map">
+            <figcaption>Coal Production by State (Trillion Btu, 2022)</figcaption>
+        </figure>
+    </div>
 
-    <figure>
-        <figcaption>✽Salary Analysis Dashboard✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Assess salary data through key demographics.</p>
-    </figure>
+    <!-- Natural Gas Visualization -->
+    <div class="visualization-container">
+        <div class="legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/natural_gas_legend.png" alt="Natural Gas Production Legend">
+        </div>
+        <figure class="map">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/natural_gas_production_map.png" alt="Natural Gas Production Map">
+            <figcaption>Natural Gas Production by State (Trillion Btu, 2022)</figcaption>
+        </figure>
+    </div>
 
-    <figure>
-        <figcaption>✽Wine Sales Analytics✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Insights on wine sales data by country.</p>
-    </figure>
+    <!-- Crude Oil Visualization -->
+    <div class="visualization-container">
+        <div class="legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/crude_oil_legend.png" alt="Crude Oil Production Legend">
+        </div>
+        <figure class="map">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/crude_oil_production_map.png" alt="Crude Oil Production Map">
+            <figcaption>Crude Oil Production by State (Trillion Btu, 2022)</figcaption>
+        </figure>
+    </div>
 
-    <figure>
-        <figcaption>✽Mobile Access Visual✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Representation of mobile access patterns by country.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Customer Demographics Dashboard✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Demographic data for better customer understanding.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Credit Risk Charts✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Assess credit risk through key demographics.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-      <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
-    </figure>
-    
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
-    </figure>
-    
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
-    </figure>
+    <!-- Nuclear Electric Power Visualization -->
+    <div class="visualization-container">
+        <div class="legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/nuclear_power_legend.png" alt="Nuclear Electric Power Legend">
+        </div>
+        <figure class="map">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/main/THESISVIZ/nuclear_power_production_map.png" alt="Nuclear Electric Power Production Map">
+            <figcaption>Nuclear Electric Power Production by State (Trillion Btu, 2022)</figcaption>
+        </figure>
+    </div>
 
     <!-- Back to Top Button -->
     <button onclick="scrollToTop()">Back to Top</button>
@@ -170,6 +167,11 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+
+</body>
+
+</html>
+
 
 </body>
 
