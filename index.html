@@ -119,7 +119,7 @@
         <p>Assess salary data through key demographics.</p>
     </figure>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -139,48 +139,50 @@
         h1 {
             color: #E6DBD0;
             margin-top: 50px;
-            font-size: 28px;
         }
 
-        .visualization-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .legend, .map {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
+        figure {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 90%;
         }
 
         figcaption {
             background-color: #333;
             color: #E6DBD0;
             padding: 10px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             margin-top: 10px;
             text-align: center;
             border-radius: 8px;
         }
 
-        img {
-            width: 100%;
+        .visualization-pair {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        .visualization-pair img {
+            width: 45%;
             max-width: 400px;
+            margin: 0 10px;
             height: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
 
-        figure {
-            margin: 20px auto;
-            text-align: center;
-            max-width: 90%;
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 
 <body>
@@ -188,64 +190,44 @@
     <h1>Thesis Visualizations</h1>
 
     <!-- Coal Visualization -->
-    <div class="visualization-container">
-        <div class="legend">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/coal_production_legend.png" alt="Coal Production Legend">
-            </figure>
+    <figure>
+        <figcaption>Coal Production by State (Trillion Btu, 2022)</figcaption>
+        <div class="visualization-pair">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/coal_production_legend.png" alt="Coal Production Legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/coal_production_map_blue.png" alt="Coal Production Map">
         </div>
-        <div class="map">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/coal_production_map_blue.png" alt="Coal Production Map">
-                <figcaption>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</figcaption>
-            </figure>
-        </div>
-    </div>
+        <p>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+    </figure>
 
     <!-- Natural Gas Visualization -->
-    <div class="visualization-container">
-        <div class="legend">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/natural_gas_production_legend.png" alt="Natural Gas Production Legend">
-            </figure>
+    <figure>
+        <figcaption>Natural Gas Production by State (Trillion Btu, 2022)</figcaption>
+        <div class="visualization-pair">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/natural_gas_production_legend.png" alt="Natural Gas Production Legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/natural_gas_production_map.png" alt="Natural Gas Production Map">
         </div>
-        <div class="map">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/natural_gas_production_map.png" alt="Natural Gas Production Map">
-                <figcaption>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</figcaption>
-            </figure>
-        </div>
-    </div>
+        <p>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+    </figure>
 
     <!-- Crude Oil Visualization -->
-    <div class="visualization-container">
-        <div class="legend">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/crude_oil_production_legend.png" alt="Crude Oil Production Legend">
-            </figure>
+    <figure>
+        <figcaption>Crude Oil Production by State (Trillion Btu, 2022)</figcaption>
+        <div class="visualization-pair">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/crude_oil_production_legend.png" alt="Crude Oil Production Legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/crude_oil_production_map.png" alt="Crude Oil Production Map">
         </div>
-        <div class="map">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/crude_oil_production_map.png" alt="Crude Oil Production Map">
-                <figcaption>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</figcaption>
-            </figure>
-        </div>
-    </div>
+        <p>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+    </figure>
 
     <!-- Nuclear Electric Power Visualization -->
-    <div class="visualization-container">
-        <div class="legend">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/nuclear_power_production_legend.png" alt="Nuclear Electric Power Legend">
-            </figure>
+    <figure>
+        <figcaption>Nuclear Electric Power Production by State (Trillion Btu, 2022)</figcaption>
+        <div class="visualization-pair">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/nuclear_power_production_legend.png" alt="Nuclear Electric Power Legend">
+            <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/nuclear_power_production_map.png" alt="Nuclear Power Production Map">
         </div>
-        <div class="map">
-            <figure>
-                <img src="https://raw.githubusercontent.com/LeilaHammer/LeilaHammer.github.io/refs/heads/main/THESISVIZ/nuclear_power_production_map.png" alt="Nuclear Electric Power Production Map">
-                <figcaption>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</figcaption>
-            </figure>
-        </div>
-    </div>
+        <p>Preliminary visualization created with Python in Jupyter Notebooks. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+    </figure>
 
 </body>
 
