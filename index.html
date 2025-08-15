@@ -9,10 +9,11 @@
 
   <style>
     :root{
-      --divider-h: 40px;          /* height of the full-width rectangle divider */
-      --divider-bg: #2f2f2f;      /* grey fill */
-      --divider-top: #3a3a3a;     /* subtle top line */
-      --divider-bottom: #191919;  /* subtle bottom line */
+      /* tweak these to adjust the header band height/colors */
+      --hero-bg: #2f2f2f;
+      --hero-pad-top: 36px;
+      --hero-pad-bottom: 28px; /* set so the band ends where you want */
+      --hero-border-bottom: #191919;
     }
 
     /* Base */
@@ -23,26 +24,23 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      overflow-x: hidden; /* prevent horizontal scroll from full-bleed sections */
     }
-    h1 { margin-top: 50px; }
-    p { font-size: 16px; margin-bottom: 30px; }
+    h1 { margin: 0; }
+    p { font-size: 16px; margin: 10px 0 30px; }
 
-    /* Full-width rectangle divider (edge-to-edge) */
-    .section-divider {
-      width: 100vw;               /* true full width */
-      height: var(--divider-h);
-      background: var(--divider-bg);
-      border-top: 1px solid var(--divider-top);
-      border-bottom: 1px solid var(--divider-bottom);
-      /* make it full-bleed even if inside centered content */
+    /* Full-width header band (covers entire top until it ends) */
+    .hero-wrap {
+      width: 100vw;                 /* full-bleed width */
       position: relative;
       left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      margin-top: 20px;
-      margin-bottom: 10px;
+      margin-left: -50vw;           /* center full-bleed inside centered layout */
+      background: var(--hero-bg);
+      padding: var(--hero-pad-top) 0 var(--hero-pad-bottom);
+      border-bottom: 1px solid var(--hero-border-bottom);
     }
+    .hero-wrap .title { margin-top: 0; }
+    .hero-wrap .subtitle { margin-bottom: 0; }
 
     /* Figures */
     figure {
@@ -161,12 +159,11 @@
     </a>
   </div>
 
-  <!-- Page header -->
-  <h1>Data Projects</h1>
-  <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
-
-  <!-- full-width grey rectangle divider -->
-  <div class="section-divider"></div>
+  <!-- Full-width header band -->
+  <div class="hero-wrap">
+    <h1 class="title">Data Projects</h1>
+    <p class="subtitle">Uncovering trends, analyzing data, and driving informed decision-making.</p>
+  </div>
 
   <!-- ======= THESIS VISUALIZATIONS FIRST ======= -->
   <h1>Thesis Visualizations</h1>
