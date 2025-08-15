@@ -156,14 +156,16 @@
   <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
 
   <!-- ======= THESIS VISUALIZATIONS FIRST ======= -->
-  <h1>Thesis Visualizations</h1>
+  <h1>Python Thesis Visualizations</h1>
 
   <!-- Bivariate Map -->
   <figure>
     <div class="bivariate-frame">
       <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
     </div>
-    <p>Preliminary visualization created with Python.</p>
+    <p>  Bivariate choropleth of state workforce readiness. Each state is assigned to a 3×3 grid (tertiles) using
+    calculated skill transferability and renewable infrastructure. Darker blue-purple = high on both, highlighting places 
+    where talent and green capacity co-locate; paler tones flag gaps. Built from 2022 ACS degree fields and EIA SEDS energy production.</p>
   </figure>
 
   <!-- Scatterplot -->
@@ -171,7 +173,9 @@
     <div class="scatterplot-frame">
       <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
     </div>
-    <p>Scatterplot visualization created with Python.</p>
+    <p>State-level scatter of skill transferability (x) vs. renewable infrastructure (y).
+  The 45° reference line partitions cases where infrastructure outpaces skills vs. the reverse,
+  helping target either workforce development or infrastructure investment.</p>
   </figure>
 
   <!-- Total Rank (top) + Equation (bottom) -->
@@ -180,7 +184,9 @@
       <img src="totalRank.png" alt="Total Green Workforce Readiness Score ranking by state" class="totalrank-img">
       <img src="totalRequation.png" alt="Total Readiness Score formula and weights" class="totalrank-img">
     </div>
-    <p>Total Green Workforce Readiness Score ranking and formula.</p>
+    <p>Composite “Total Readiness Score” ranking. I normalize each component to 0–1 and apply weights:
+  Renewable Infrastructure (0.35), Skill Transferability (0.30), Education Alignment (0.20),
+  minus a Non-Renewable Production dampener (0.15). The equation below shows the specification.</p>
   </figure>
 
   <!-- Natural Gas -->
