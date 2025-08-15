@@ -61,6 +61,8 @@
       margin: 20px auto;
       max-width: 90%;
     }
+    /* Remove vertical gap for specific figures */
+    .no-gap-fig { margin: 0 auto; }
 
     /* Power BI iframes */
     .embed-frame {
@@ -87,10 +89,7 @@
       cursor: pointer;
       filter: brightness(70%);
     }
-    .social-buttons a img:hover {
-      opacity: 0.8;
-      filter: brightness(90%);
-    }
+    .social-buttons a img:hover { opacity: 0.8; filter: brightness(90%); }
 
     /* White padded frames (single visuals) */
     .bivariate-frame,
@@ -186,7 +185,7 @@
     </a>
   </div>
 
-  <!-- Full-width header band -->
+  <!-- Header -->
   <div class="hero-wrap">
     <h1 class="title">Data Projects</h1>
     <p class="subtitle">Uncovering trends, analyzing data, and driving informed decision-making.</p>
@@ -226,13 +225,14 @@
     <h1 class="section-title">R</h1>
   </div>
 
-  <figure>
+  <!-- No gaps between these two figures -->
+  <figure class="no-gap-fig">
     <div class="white-frame">
       <img src="boxplot.png" alt="R boxplot by region" class="frame-img">
     </div>
   </figure>
 
-  <figure>
+  <figure class="no-gap-fig">
     <div class="white-frame">
       <img src="Rcode.png" alt="R code and confidence interval output" class="frame-img">
     </div>
@@ -240,7 +240,6 @@
 
   <!-- ======= TABLEAU ======= -->
   <div class="section-heading">
-    <!-- icon-only, no wordmark -->
     <img class="section-logo" src="https://cdn.simpleicons.org/tableau/E6DBD0" alt="Tableau icon">
     <h1 class="section-title">TABLEAU</h1>
   </div>
@@ -267,7 +266,6 @@
 
   <!-- ======= POWER BI ======= -->
   <div class="section-heading">
-    <!-- icon-only, no wordmark -->
     <img class="section-logo" src="https://cdn.simpleicons.org/powerbi/E6DBD0" alt="Power BI icon">
     <h1 class="section-title">POWER BI</h1>
   </div>
@@ -293,4 +291,44 @@
 
   <figure>
     <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOS
+      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Wine Sales Analytics">
+    </iframe>
+    <p>Insights on wine sales data by country.</p>
+  </figure>
+
+  <figure>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Mobile Access">
+    </iframe>
+    <p>Representation of mobile access patterns by country.</p>
+  </figure>
+
+  <figure>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Customer Demographics">
+    </iframe>
+    <p>Demographic data for better customer understanding.</p>
+  </figure>
+
+  <figure>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Airbnb 1">
+    </iframe>
+    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction.</p>
+  </figure>
+
+  <figure>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Airbnb 2">
+    </iframe>
+    <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
+  </figure>
+
+  <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to Top</button>
+</body>
+</html>
