@@ -44,9 +44,9 @@
 
     /* Section sub-note (e.g., *Interactive*) */
     .section-note {
-      font-size: 18px;              /* a little smaller than normal body */
-      color: #cfc7bf;               /* softer than main text */
-      margin: 6px 0 20px;           /* tight spacing under the H1 */
+      font-size: 18px;
+      color: #cfc7bf;
+      margin: 6px 0 20px;
       letter-spacing: 0.3px;
     }
 
@@ -129,6 +129,24 @@
       display: block;
     }
 
+    /* Tableau frames (variable height; good for tall screenshots) */
+    .tableau-frame {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 12px 0; /* a bit of breathing room */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tableau-img {
+      max-width: 98%;
+      height: auto;
+      display: block;
+    }
+
     /* Optional button */
     button {
       background-color: #6fd941;
@@ -195,6 +213,21 @@
     <p>
       Normalized Composite Readiness Score
     </p>
+  </figure>
+
+  <!-- ======= NEW: TABLEAU SECTION ======= -->
+  <h1>TABLEAU</h1>
+
+  <figure>
+    <div class="tableau-frame">
+      <img src="Tableau1.png" alt="Tableau dashboard 1" class="tableau-img">
+    </div>
+  </figure>
+
+  <figure>
+    <div class="tableau-frame">
+      <img src="Tableau2.png" alt="Tableau dashboard 2" class="tableau-img">
+    </div>
   </figure>
 
   <!-- ======= POWER BI DASHBOARDS AFTER ======= -->
