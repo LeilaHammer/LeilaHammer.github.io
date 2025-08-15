@@ -13,12 +13,12 @@
       --hero-pad-top: 36px;
       --hero-pad-bottom: 28px;
       --hero-border-bottom: #191919;
+      --accent: #E6DBD0;
     }
 
-    /* Base */
     body {
       background-color: #1a1a1a;
-      color: #E6DBD0;
+      color: var(--accent);
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
@@ -28,7 +28,6 @@
     h1 { margin: 0; }
     p  { font-size: 16px; margin: 10px 0 30px; }
 
-    /* Full-width header band */
     .hero-wrap {
       width: 100vw;
       position: relative;
@@ -50,20 +49,20 @@
     }
     .section-title { margin: 0; }
     .section-logo {
-      height: 1em;              /* match text height */
+      height: 1em;      /* match text height */
       width: auto;
       object-fit: contain;
-      filter: brightness(92%);
+      vertical-align: middle;
+      filter: brightness(96%);
     }
 
-    /* Figures */
     figure {
       text-align: center;
       margin: 20px auto;
       max-width: 90%;
     }
 
-    /* Power BI embeds */
+    /* Power BI iframes */
     .embed-frame {
       width: 100%;
       max-width: 800px;
@@ -153,7 +152,6 @@
       display: block;
     }
 
-    /* Tiny note under POWER BI header */
     .section-note {
       font-size: 18px;
       color: #cfc7bf;
@@ -161,10 +159,9 @@
       letter-spacing: 0.3px;
     }
 
-    /* Button */
     button {
       background-color: #6fd941;
-      color: #E6DBD0;
+      color: var(--accent);
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
@@ -201,38 +198,29 @@
     <h1 class="section-title">PYTHON</h1>
   </div>
 
-  <!-- Bivariate Map -->
   <figure>
     <div class="bivariate-frame">
       <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
     </div>
-    <p>
-      Bivariate choropleth map. Darker tones indicate co-location of skills and green capacity.
-    </p>
+    <p>Bivariate choropleth map. Darker tones indicate co-location of skills and green capacity.</p>
   </figure>
 
-  <!-- Scatterplot -->
   <figure>
     <div class="scatterplot-frame">
       <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
     </div>
-    <p>
-      State scatter plot. Helps identify states that need workforce development versus infrastructure investment.
-    </p>
+    <p>State scatter plot. Helps identify states that need workforce development versus infrastructure investment.</p>
   </figure>
 
-  <!-- Total Rank (top) + Equation (bottom) -->
   <figure>
     <div class="totalrank-frame">
       <img src="totalRank.png" alt="Total Green Workforce Readiness Score ranking by state" class="totalrank-img">
       <img src="totalRequation.png" alt="Total Readiness Score formula and weights" class="totalrank-img">
     </div>
-    <p>
-      Normalized Composite Readiness Score
-    </p>
+    <p>Normalized Composite Readiness Score</p>
   </figure>
 
-  <!-- ======= R (ABOVE TABLEAU) ======= -->
+  <!-- ======= R ======= -->
   <div class="section-heading">
     <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R logo">
     <h1 class="section-title">R</h1>
@@ -252,7 +240,8 @@
 
   <!-- ======= TABLEAU ======= -->
   <div class="section-heading">
-    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau logo">
+    <!-- icon-only, no wordmark -->
+    <img class="section-logo" src="https://cdn.simpleicons.org/tableau/E6DBD0" alt="Tableau icon">
     <h1 class="section-title">TABLEAU</h1>
   </div>
 
@@ -278,12 +267,12 @@
 
   <!-- ======= POWER BI ======= -->
   <div class="section-heading">
-    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_Logo.svg" alt="Power BI logo">
+    <!-- icon-only, no wordmark -->
+    <img class="section-logo" src="https://cdn.simpleicons.org/powerbi/E6DBD0" alt="Power BI icon">
     <h1 class="section-title">POWER BI</h1>
   </div>
   <p class="section-note">*Interactive*</p>
 
-  <!-- Salary Analysis -->
   <figure>
     <iframe
       class="embed-frame"
@@ -294,7 +283,6 @@
     <p>Assess salary data through key demographics.</p>
   </figure>
 
-  <!-- Credit Risk -->
   <figure>
     <iframe class="embed-frame"
       src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
@@ -303,52 +291,6 @@
     <p>Assess credit risk through key demographics.</p>
   </figure>
 
-  <!-- Wine Sales -->
   <figure>
     <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Wine Sales Analytics">
-    </iframe>
-    <p>Insights on wine sales data by country.</p>
-  </figure>
-
-  <!-- Mobile Access -->
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Mobile Access">
-    </iframe>
-    <p>Representation of mobile access patterns by country.</p>
-  </figure>
-
-  <!-- Customer Demographics -->
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Customer Demographics">
-    </iframe>
-    <p>Demographic data for better customer understanding.</p>
-  </figure>
-
-  <!-- Airbnb 1 -->
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Airbnb 1">
-    </iframe>
-    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction.</p>
-  </figure>
-
-  <!-- Airbnb 2 -->
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Airbnb 2">
-    </iframe>
-    <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
-  </figure>
-
-  <!-- Back to top -->
-  <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to Top</button>
-</body>
-</html>
+      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOS
