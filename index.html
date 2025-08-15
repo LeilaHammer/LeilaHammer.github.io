@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
   <style>
+    :root{
+      --divider-h: 40px;          /* height of the full-width rectangle divider */
+      --divider-bg: #2f2f2f;      /* grey fill */
+      --divider-top: #3a3a3a;     /* subtle top line */
+      --divider-bottom: #191919;  /* subtle bottom line */
+    }
+
     /* Base */
     body {
       background-color: #1a1a1a;
@@ -20,13 +27,21 @@
     h1 { margin-top: 50px; }
     p { font-size: 16px; margin-bottom: 30px; }
 
-    /* Divider under page header */
+    /* Full-width rectangle divider (edge-to-edge) */
     .section-divider {
-      width: min(90%, 800px);
-      height: 8px;
-      background-color: #2f2f2f; /* soft grey bar */
-      border-radius: 8px;
-      margin: 20px auto 10px;
+      width: 100vw;               /* true full width */
+      height: var(--divider-h);
+      background: var(--divider-bg);
+      border-top: 1px solid var(--divider-top);
+      border-bottom: 1px solid var(--divider-bottom);
+      /* make it full-bleed even if inside centered content */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
     /* Figures */
@@ -150,7 +165,7 @@
   <h1>Data Projects</h1>
   <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
 
-  <!-- grey divider -->
+  <!-- full-width grey rectangle divider -->
   <div class="section-divider"></div>
 
   <!-- ======= THESIS VISUALIZATIONS FIRST ======= -->
@@ -237,5 +252,17 @@
 
   <figure>
     <figcaption>✽Air B&B✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRm
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 2"></iframe>
+    <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
+  </figure>
 
+  <figure>
+    <figcaption>✽Air B&B✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 3"></iframe>
+    <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
+  </figure>
+
+  <!-- Back to top -->
+  <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to Top</button>
+</body>
+</html>
