@@ -1,275 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leila Hammer Projects</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #E6DBD0;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leila Hammer Projects</title>
 
-        h1 {
-            color: #E6DBD0;
-            margin-top: 50px;
-        }
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
-        p {
-            color: #E6DBD0;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
+  <style>
+    /* Base */
+    body {
+      background-color: #1a1a1a;
+      color: #E6DBD0;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 { margin-top: 50px; }
+    p { font-size: 16px; margin-bottom: 30px; }
 
-        figure {
-            text-align: center;
-            margin: 20px auto; /* Center the figure */
-            max-width: 90%; /* Prevents from stretching too wide */
-        }
+    /* Figures */
+    figure {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 90%;
+    }
+    figcaption {
+      background-color: #333;
+      color: #E6DBD0;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 8px;
+    }
 
-        figcaption {
-            background-color: #333;
-            color: #E6DBD0;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-            text-align: center;
-        }
+    /* Power BI embeds */
+    .embed-frame {
+      width: 100%;
+      max-width: 800px;   /* target width */
+      height: 450px;      /* target height */
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-        iframe {
-            width: 100%;
-            max-width: 800px; /* Sets a maximum width */
-            height: 450px; /* Maintains aspect ratio */
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* Social buttons */
+    .social-buttons {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      display: flex;
+      gap: 10px;
+    }
+    .social-buttons a img {
+      width: 40px;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer;
+      filter: brightness(70%);
+    }
+    .social-buttons a img:hover {
+      opacity: 0.8;
+      filter: brightness(90%);
+    }
 
-        /* Social Media Buttons Styling */
-        .social-buttons {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 999;
-            display: flex;
-            gap: 10px;
-        }
+    /* Thesis visuals */
+    .visualization-pair {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      margin: 20px auto;
+      max-width: 90%;
+    }
+    .visualization-pair img {
+      height: 450px;      /* pairs keep same height */
+      width: auto;        /* preserve aspect */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-        .social-buttons a img {
-            width: 40px;
-            height: auto;
-            border-radius: 5px;
-            cursor: pointer;
-            filter: brightness(70%); /* Makes the icon a lighter grey */
-        }
+    /* Make the bivariate map match the Power BI box exactly */
+    .bivariate-map {
+      width: 100%;
+      max-width: 800px;   /* same as iframe */
+      height: 450px;      /* same as iframe */
+      object-fit: contain;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
+    }
 
-        .social-buttons a img:hover {
-            opacity: 0.8;
-            filter: brightness(90%); /* Lightens the grey further on hover */
-        }
-
-        /* Back to Top Button Styling */
-        button {
-            background-color: #6fd941;
-            color: #E6DBD0;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #386823;
-        }
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    /* Button */
+    button {
+      background-color: #6fd941;
+      color: #E6DBD0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 30px 0 50px;
+    }
+    button:hover { background-color: #386823; }
+  </style>
 </head>
 
 <body>
+  <!-- Social -->
+  <div class="social-buttons">
+    <a href="https://github.com/LeilaHammer" target="_blank" aria-label="GitHub">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"/>
+    </a>
+    <a href="https://www.linkedin.com/in/leilahammer" target="_blank" aria-label="LinkedIn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"/>
+    </a>
+    <a href="mailto:leilahammer2000@gmail.com" target="_blank" aria-label="Email">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail"/>
+    </a>
+  </div>
 
-    <!-- Social Media Buttons -->
-    <div class="social-buttons">
+  <h1>Data Projects</h1>
+  <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
 
-        <a href="https://github.com/LeilaHammer" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" width="40" height="40">
-        </a>
-        <a href="https://www.linkedin.com/in/leilahammer" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
-        </a>
-      
-        <a href="mailto:leilahammer2000@gmail.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
-        </a>
-  
+  <!-- Power BI -->
+  <figure>
+    <figcaption>✽Salary Analysis Dashboard✽</figcaption>
+    <iframe
+      class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true"
+      title="Salary Analysis Dashboard">
+    </iframe>
+    <p>Assess salary data through key demographics.</p>
+  </figure>
+
+  <!-- Thesis Visualizations -->
+  <h1>Thesis Visualizations</h1>
+
+  <!-- Bivariate Map (now same size as Power BI) -->
+  <figure>
+    <img src="BIVARIATE MAP.png" class="bivariate-map" alt="Bivariate map: skill transferability vs renewable infrastructure"/>
+    <p>Preliminary visualization created with Python.</p>
+  </figure>
+
+  <!-- Natural Gas -->
+  <figure>
+    <div class="visualization-pair">
+      <img src="natural_gas_production_legend.png" alt="Natural gas legend"/>
+      <img src="natural_gas_production_map.png" alt="Natural gas map"/>
     </div>
+    <p>Preliminary visualization created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+  </figure>
 
-    <h1>Data Projects</h1>
+  <!-- Crude Oil -->
+  <figure>
+    <div class="visualization-pair">
+      <img src="crude_oil_production_legend.png" alt="Crude oil legend"/>
+      <img src="crude_oil_production_map.png" alt="Crude oil map"/>
+    </div>
+    <p>Preliminary visualization created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+  </figure>
 
-    <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
+  <!-- Nuclear -->
+  <figure>
+    <div class="visualization-pair">
+      <img src="nuclear_power_production_legend.png" alt="Nuclear legend"/>
+      <img src="nuclear_power_production_map.png" alt="Nuclear map"/>
+    </div>
+    <p>Preliminary visualizations created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+  </figure>
 
-    <figure>
-        <figcaption>✽Salary Analysis Dashboard✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Assess salary data through key demographics.</p>
-    </figure>
+  <!-- Other Power BI embeds -->
+  <figure>
+    <figcaption>✽Wine Sales Analytics✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Wine Sales Analytics"></iframe>
+    <p>Insights on wine sales data by country.</p>
+  </figure>
 
-<!DOCTYPE html>
-<html lang="en">
+  <figure>
+    <figcaption>✽Mobile Access Visual✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Mobile Access"></iframe>
+    <p>Representation of mobile access patterns by country.</p>
+  </figure>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leila Hammer Projects</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #E6DBD0;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+  <figure>
+    <figcaption>✽Customer Demographics Dashboard✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Customer Demographics"></iframe>
+    <p>Demographic data for better customer understanding.</p>
+  </figure>
 
-        h1 {
-            color: #E6DBD0;
-            margin-top: 50px;
-        }
+  <figure>
+    <figcaption>✽Credit Risk Charts✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Credit Risk"></iframe>
+    <p>Assess credit risk through key demographics.</p>
+  </figure>
 
-        figure {
-            text-align: center;
-            margin: 20px auto;
-            max-width: 90%;
-        }
+  <figure>
+    <figcaption>✽Air B&B✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 1"></iframe>
+    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
+  </figure>
 
-        figcaption {
-            background-color: #333;
-            color: #E6DBD0;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-            text-align: center;
-            border-radius: 8px;
-        }
+  <figure>
+    <figcaption>✽Air B&B✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 2"></iframe>
+    <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
+  </figure>
 
-        .visualization-pair {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-            max-width: 90%;
-        }
+  <figure>
+    <figcaption>✽Air B&B✽</figcaption>
+    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 3"></iframe>
+    <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
+  </figure>
 
-        .visualization-pair img {
-            height: 450px; /* Ensures both images have the same height */
-            width: auto; /* Allows width to adjust naturally */
-            margin: 0; /* Removes space between images */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-    </style>
-</head>
-
-<body>
-
-    <h1>Thesis Visualizations</h1>
-
-    <!-- Coal Visualization -->
-    <figure>
-        <div class="visualization-pair">
-            <img src="BIVARIATE MAP.png">
-        </div>
-        <p>Preliminary visualization created with Python.</p>
-    </figure>
-
-    <!-- Natural Gas Visualization -->
-    <figure>
-        <div class="visualization-pair">
-            <img src="natural_gas_production_legend.png">
-            <img src="natural_gas_production_map.png">
-        </div>
-        <p>Preliminary visualization created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
-    </figure>
-
-    <!-- Crude Oil Visualization -->
-    <figure>
-        <div class="visualization-pair">
-            <img src="crude_oil_production_legend.png">
-            <img src="crude_oil_production_map.png">
-        </div>
-        <p>Preliminary visualization created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
-    </figure>
-
-    <!-- Nuclear Electric Power Visualization -->
-    <figure>
-        <div class="visualization-pair">
-            <img src="nuclear_power_production_legend.png">
-            <img src="nuclear_power_production_map.png">
-        </div>
-        <p>Preliminary visualizations created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
-    </figure>
-
-</body>
-
-</html>
-
-    <figure>
-        <figcaption>✽Wine Sales Analytics✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Insights on wine sales data by country.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Mobile Access Visual✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Representation of mobile access patterns by country.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Customer Demographics Dashboard✽</figcaption>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Demographic data for better customer understanding.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Credit Risk Charts✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>Assess credit risk through key demographics.</p>
-    </figure>
-
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-      <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
-    </figure>
-    
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
-    </figure>
-    
-    <figure>
-        <figcaption>✽Air B&B✽</figcaption>
-       <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
-        <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
-    </figure>
-
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()">Back to Top</button>
-
-    <script>
-        function scrollToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
+  <!-- Back to top -->
+  <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to Top</button>
 </body>
 </html>
