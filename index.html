@@ -46,9 +46,9 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      margin-top: 30px;         /* space above each section */
+      margin-top: 30px;
     }
-    .section-title { margin: 0; } /* ensure no extra spacing */
+    .section-title { margin: 0; }
     .section-logo {
       height: 1em;              /* match text height */
       width: auto;
@@ -135,8 +135,8 @@
       display: block;
     }
 
-    /* Tableau frames (for tall screenshots) */
-    .tableau-frame {
+    /* Generic white frame for static images (Tableau, R, etc.) */
+    .white-frame {
       background-color: #ffffff;
       width: 100%;
       max-width: 800px;
@@ -147,7 +147,7 @@
       align-items: center;
       justify-content: center;
     }
-    .tableau-img {
+    .frame-img {
       max-width: 98%;
       height: auto;
       display: block;
@@ -195,7 +195,7 @@
     <p class="subtitle">Uncovering trends, analyzing data, and driving informed decision-making.</p>
   </div>
 
-  <!-- ======= THESIS VISUALIZATIONS FIRST ======= -->
+  <!-- ======= PYTHON ======= -->
   <div class="section-heading">
     <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python logo">
     <h1 class="section-title">PYTHON</h1>
@@ -232,6 +232,24 @@
     </p>
   </figure>
 
+  <!-- ======= R (ABOVE TABLEAU) ======= -->
+  <div class="section-heading">
+    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R logo">
+    <h1 class="section-title">R</h1>
+  </div>
+
+  <figure>
+    <div class="white-frame">
+      <img src="boxplot.png" alt="R boxplot by region" class="frame-img">
+    </div>
+  </figure>
+
+  <figure>
+    <div class="white-frame">
+      <img src="Rcode.png" alt="R code and confidence interval output" class="frame-img">
+    </div>
+  </figure>
+
   <!-- ======= TABLEAU ======= -->
   <div class="section-heading">
     <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau logo">
@@ -239,8 +257,8 @@
   </div>
 
   <figure>
-    <div class="tableau-frame">
-      <img src="Tableau1.png" alt="Tableau dashboard: compliance past-due aging" class="tableau-img">
+    <div class="white-frame">
+      <img src="Tableau1.png" alt="Tableau dashboard: compliance past-due aging" class="frame-img">
     </div>
     <p>
       Compliance dashboard showing average training <em>past-due aging</em> by executive leadership team with an overall
@@ -249,8 +267,8 @@
   </figure>
 
   <figure>
-    <div class="tableau-frame">
-      <img src="Tableau2.png" alt="Tableau dashboard: UPS address change metrics" class="tableau-img">
+    <div class="white-frame">
+      <img src="Tableau2.png" alt="Tableau dashboard: UPS address change metrics" class="frame-img">
     </div>
     <p>
       Operations metrics for UPS address corrections: headline totals by change type, small-multiple time series (July–September),
