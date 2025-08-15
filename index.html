@@ -49,19 +49,14 @@
     }
     .section-title { margin: 0; }
     .section-logo {
-      height: 1em;      /* match text height */
+      height: 1.1em;           /* match text height (slightly larger for wordmarks) */
       width: auto;
-      object-fit: contain;
       vertical-align: middle;
+      display: inline-block;
       filter: brightness(96%);
     }
 
-    figure {
-      text-align: center;
-      margin: 20px auto;
-      max-width: 90%;
-    }
-    /* Remove vertical gap for specific figures */
+    figure { text-align: center; margin: 20px auto; max-width: 90%; }
     .no-gap-fig { margin: 0 auto; }
 
     /* Power BI iframes */
@@ -83,11 +78,7 @@
       gap: 10px;
     }
     .social-buttons a img {
-      width: 40px;
-      height: auto;
-      border-radius: 5px;
-      cursor: pointer;
-      filter: brightness(70%);
+      width: 40px; height: auto; border-radius: 5px; cursor: pointer; filter: brightness(70%);
     }
     .social-buttons a img:hover { opacity: 0.8; filter: brightness(90%); }
 
@@ -105,13 +96,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .bivariate-map-padded,
-    .scatterplot-padded {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      display: block;
-    }
+    .scatterplot-padded { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
 
     /* Stacked total-rank + equation frame */
     .totalrank-frame {
@@ -126,12 +111,7 @@
       padding: 20px 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .totalrank-img {
-      max-width: 95%;
-      height: auto;
-      margin: 10px 0;
-      display: block;
-    }
+    .totalrank-img { max-width: 95%; height: auto; margin: 10px 0; display: block; }
 
     /* Generic white frame for static images (Tableau, R, etc.) */
     .white-frame {
@@ -145,27 +125,13 @@
       align-items: center;
       justify-content: center;
     }
-    .frame-img {
-      max-width: 98%;
-      height: auto;
-      display: block;
-    }
+    .frame-img { max-width: 98%; height: auto; display: block; }
 
-    .section-note {
-      font-size: 18px;
-      color: #cfc7bf;
-      margin: 6px 0 20px;
-      letter-spacing: 0.3px;
-    }
+    .section-note { font-size: 18px; color: #cfc7bf; margin: 6px 0 20px; letter-spacing: 0.3px; }
 
     button {
-      background-color: #6fd941;
-      color: var(--accent);
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 30px 0 50px;
+      background-color: #6fd941; color: var(--accent);
+      padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 30px 0 50px;
     }
     button:hover { background-color: #386823; }
   </style>
@@ -177,158 +143,6 @@
     <a href="https://github.com/LeilaHammer" target="_blank" aria-label="GitHub">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"/>
     </a>
-    <a href="https://www.linkedin.com/in/leilahammer" target="_blank" aria-label="LinkedIn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"/>
-    </a>
-    <a href="mailto:leilahammer2000@gmail.com" target="_blank" aria-label="Email">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail"/>
-    </a>
-  </div>
+    <a href="https://www.linkedin.com/in/leilahammer" target="_blank_
 
-  <!-- Header -->
-  <div class="hero-wrap">
-    <h1 class="title">Data Projects</h1>
-    <p class="subtitle">Uncovering trends, analyzing data, and driving informed decision-making.</p>
-  </div>
-
-  <!-- ======= PYTHON ======= -->
-  <div class="section-heading">
-    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python logo">
-    <h1 class="section-title">PYTHON</h1>
-  </div>
-
-  <figure>
-    <div class="bivariate-frame">
-      <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
-    </div>
-    <p>Bivariate choropleth map. Darker tones indicate co-location of skills and green capacity.</p>
-  </figure>
-
-  <figure>
-    <div class="scatterplot-frame">
-      <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
-    </div>
-    <p>State scatter plot. Helps identify states that need workforce development versus infrastructure investment.</p>
-  </figure>
-
-  <figure>
-    <div class="totalrank-frame">
-      <img src="totalRank.png" alt="Total Green Workforce Readiness Score ranking by state" class="totalrank-img">
-      <img src="totalRequation.png" alt="Total Readiness Score formula and weights" class="totalrank-img">
-    </div>
-    <p>Normalized Composite Readiness Score</p>
-  </figure>
-
-  <!-- ======= R ======= -->
-  <div class="section-heading">
-    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R logo">
-    <h1 class="section-title">R</h1>
-  </div>
-
-  <!-- No gaps between these two figures -->
-  <figure class="no-gap-fig">
-    <div class="white-frame">
-      <img src="boxplot.png" alt="R boxplot by region" class="frame-img">
-    </div>
-  </figure>
-
-  <figure class="no-gap-fig">
-    <div class="white-frame">
-      <img src="Rcode.png" alt="R code and confidence interval output" class="frame-img">
-    </div>
-  </figure>
-
-  <!-- ======= TABLEAU ======= -->
-  <div class="section-heading">
-    <img class="section-logo" src="https://cdn.simpleicons.org/tableau/E6DBD0" alt="Tableau icon">
-    <h1 class="section-title">TABLEAU</h1>
-  </div>
-
-  <figure>
-    <div class="white-frame">
-      <img src="Tableau1.png" alt="Tableau dashboard: compliance past-due aging" class="frame-img">
-    </div>
-    <p>
-      Compliance dashboard showing average training <em>past-due aging</em> by executive leadership team with an overall
-      benchmark line and a training-title comparison. Used to target outreach and track progress in reducing overdue learning.
-    </p>
-  </figure>
-
-  <figure>
-    <div class="white-frame">
-      <img src="Tableau2.png" alt="Tableau dashboard: UPS address change metrics" class="frame-img">
-    </div>
-    <p>
-      Operations metrics for UPS address corrections: headline totals by change type, small-multiple time series (July–September),
-      and completion pipeline. Supports capacity planning, SLA monitoring, and process improvement.
-    </p>
-  </figure>
-
-  <!-- ======= POWER BI ======= -->
-  <div class="section-heading">
-    <img class="section-logo" src="https://cdn.simpleicons.org/powerbi/E6DBD0" alt="Power BI icon">
-    <h1 class="section-title">POWER BI</h1>
-  </div>
-  <p class="section-note">*Interactive*</p>
-
-  <figure>
-    <iframe
-      class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true"
-      title="Salary Analysis Dashboard">
-    </iframe>
-    <p>Assess salary data through key demographics.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Credit Risk">
-    </iframe>
-    <p>Assess credit risk through key demographics.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Wine Sales Analytics">
-    </iframe>
-    <p>Insights on wine sales data by country.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Mobile Access">
-    </iframe>
-    <p>Representation of mobile access patterns by country.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Customer Demographics">
-    </iframe>
-    <p>Demographic data for better customer understanding.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Airbnb 1">
-    </iframe>
-    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction.</p>
-  </figure>
-
-  <figure>
-    <iframe class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true" title="Airbnb 2">
-    </iframe>
-    <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
-  </figure>
-
-  <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to Top</button>
-</body>
-</html>
+      
