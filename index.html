@@ -67,7 +67,7 @@
       filter: brightness(90%);
     }
 
-    /* Thesis visuals */
+    /* Thesis visuals: legend+map pairs keep same height */
     .visualization-pair {
       display: flex;
       justify-content: center;
@@ -77,20 +77,29 @@
       max-width: 90%;
     }
     .visualization-pair img {
-      height: 450px;      /* pairs keep same height */
-      width: auto;        /* preserve aspect */
+      height: 450px;
+      width: auto;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Make the bivariate map match the Power BI box exactly */
-    .bivariate-map {
+    /* Bivariate framed version (white padded box matching Power BI size) */
+    .bivariate-frame {
+      background-color: #ffffff;  /* white padding */
       width: 100%;
-      max-width: 800px;   /* same as iframe */
-      height: 450px;      /* same as iframe */
-      object-fit: contain;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: block;
+      max-width: 800px;           /* match Power BI width */
+      height: 450px;              /* match Power BI height */
+      display: flex;
+      align-items: center;        /* center vertically */
+      justify-content: center;    /* center horizontally */
       margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .bivariate-map-padded {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
     /* Button */
@@ -139,9 +148,11 @@
   <!-- Thesis Visualizations -->
   <h1>Thesis Visualizations</h1>
 
-  <!-- Bivariate Map (now same size as Power BI) -->
+  <!-- Bivariate Map with white padded frame (same size as Power BI) -->
   <figure>
-    <img src="BIVARIATE MAP.png" class="bivariate-map" alt="Bivariate map: skill transferability vs renewable infrastructure"/>
+    <div class="bivariate-frame">
+      <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
+    </div>
     <p>Preliminary visualization created with Python.</p>
   </figure>
 
@@ -172,7 +183,7 @@
     <p>Preliminary visualizations created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
   </figure>
 
-  <!-- Other Power BI embeds -->
+  <!-- More Power BI embeds -->
   <figure>
     <figcaption>✽Wine Sales Analytics✽</figcaption>
     <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Wine Sales Analytics"></iframe>
@@ -200,7 +211,7 @@
   <figure>
     <figcaption>✽Air B&B✽</figcaption>
     <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 1"></iframe>
-    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction. It helps identify districts with high revenue potential and positive guest experiences.</p>
+    <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction.</p>
   </figure>
 
   <figure>
