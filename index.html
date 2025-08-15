@@ -40,8 +40,8 @@
     /* Power BI embeds */
     .embed-frame {
       width: 100%;
-      max-width: 800px;   /* target width */
-      height: 450px;      /* target height */
+      max-width: 800px;
+      height: 450px;
       border: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
@@ -67,7 +67,7 @@
       filter: brightness(90%);
     }
 
-    /* Thesis visuals: legend+map pairs keep same height */
+    /* Legend+map pairs */
     .visualization-pair {
       display: flex;
       justify-content: center;
@@ -82,19 +82,21 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Bivariate framed version (white padded box matching Power BI size) */
-    .bivariate-frame {
-      background-color: #ffffff;  /* white padding */
+    /* White padded frames (match Power BI size) */
+    .bivariate-frame,
+    .scatterplot-frame {
+      background-color: #ffffff;
       width: 100%;
-      max-width: 800px;           /* match Power BI width */
-      height: 450px;              /* match Power BI height */
+      max-width: 800px;
+      height: 450px;
       display: flex;
-      align-items: center;        /* center vertically */
-      justify-content: center;    /* center horizontally */
+      align-items: center;
+      justify-content: center;
       margin: 0 auto;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .bivariate-map-padded {
+    .bivariate-map-padded,
+    .scatterplot-padded {
       max-width: 100%;
       max-height: 100%;
       width: auto;
@@ -148,12 +150,20 @@
   <!-- Thesis Visualizations -->
   <h1>Thesis Visualizations</h1>
 
-  <!-- Bivariate Map with white padded frame (same size as Power BI) -->
+  <!-- Bivariate Map -->
   <figure>
     <div class="bivariate-frame">
       <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
     </div>
     <p>Preliminary visualization created with Python.</p>
+  </figure>
+
+  <!-- Scatterplot -->
+  <figure>
+    <div class="scatterplot-frame">
+      <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
+    </div>
+    <p>Scatterplot visualization created with Python.</p>
   </figure>
 
   <!-- Natural Gas -->
