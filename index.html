@@ -49,7 +49,7 @@
     }
     .section-title { margin: 0; }
     .section-logo {
-      height: 1.1em;          
+      height: 1.1em;
       width: auto;
       vertical-align: middle;
       display: inline-block;
@@ -59,7 +59,6 @@
     figure { text-align: center; margin: 20px auto; max-width: 90%; }
     .no-gap-fig { margin: 0 auto; }
 
-    /* Power BI iframes */
     .embed-frame {
       width: 100%;
       max-width: 800px;
@@ -68,7 +67,6 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Social buttons */
     .social-buttons {
       position: fixed;
       top: 20px;
@@ -82,7 +80,6 @@
     }
     .social-buttons a img:hover { opacity: 0.8; filter: brightness(90%); }
 
-    /* White padded frames (single visuals) */
     .bivariate-frame,
     .scatterplot-frame {
       background-color: #ffffff;
@@ -98,7 +95,6 @@
     .bivariate-map-padded,
     .scatterplot-padded { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
 
-    /* Stacked total-rank + equation frame */
     .totalrank-frame {
       background-color: #ffffff;
       width: 100%;
@@ -113,7 +109,6 @@
     }
     .totalrank-img { max-width: 95%; height: auto; margin: 10px 0; display: block; }
 
-    /* Generic white frame for static images (Tableau, R, etc.) */
     .white-frame {
       background-color: #ffffff;
       width: 100%;
@@ -229,7 +224,13 @@
 
   <!-- ======= POWER BI ======= -->
   <div class="section-heading">
-    <img class="section-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_Logo.svg" alt="">
+    <!-- 🔧 PNG thumbnail to avoid any SVG/CORS hiccups + inline SVG fallback -->
+    <img
+      class="section-logo"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Power_BI_Logo.svg/200px-Power_BI_Logo.svg.png"
+      alt=""
+      onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect x=%223%22 y=%2210%22 width=%224%22 height=%229%22 rx=%221.2%22 fill=%22%23E6DBD0%22/><rect x=%229%22 y=%227%22 width=%224%22 height=%2212%22 rx=%221.2%22 fill=%22%23E6DBD0%22/><rect x=%2215%22 y=%225%22 width=%224%22 height=%2214%22 rx=%221.2%22 fill=%22%23E6DBD0%22/></svg>';"
+    >
     <h1 class="section-title">POWER BI</h1>
   </div>
   <p class="section-note">*Interactive*</p>
