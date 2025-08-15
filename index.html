@@ -82,7 +82,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* White padded frames (match Power BI size) */
+    /* White padded frames (match Power BI width, fixed height for single visuals) */
     .bivariate-frame,
     .scatterplot-frame {
       background-color: #ffffff;
@@ -101,6 +101,26 @@
       max-height: 100%;
       width: auto;
       height: auto;
+      display: block;
+    }
+
+    /* Stacked total-rank + equation frame (same width, variable height) */
+    .totalrank-frame {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .totalrank-img {
+      max-width: 95%;
+      height: auto;
+      margin: 10px 0;
       display: block;
     }
 
@@ -135,19 +155,7 @@
   <h1>Data Projects</h1>
   <p>Uncovering trends, analyzing data, and driving informed decision-making.</p>
 
-  <!-- Power BI -->
-  <figure>
-    <figcaption>✽Salary Analysis Dashboard✽</figcaption>
-    <iframe
-      class="embed-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
-      allowfullscreen="true"
-      title="Salary Analysis Dashboard">
-    </iframe>
-    <p>Assess salary data through key demographics.</p>
-  </figure>
-
-  <!-- Thesis Visualizations -->
+  <!-- ======= THESIS VISUALIZATIONS FIRST ======= -->
   <h1>Thesis Visualizations</h1>
 
   <!-- Bivariate Map -->
@@ -164,6 +172,15 @@
       <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
     </div>
     <p>Scatterplot visualization created with Python.</p>
+  </figure>
+
+  <!-- Total Rank (top) + Equation (bottom) -->
+  <figure>
+    <div class="totalrank-frame">
+      <img src="totalRank.png" alt="Total Green Workforce Readiness Score ranking by state" class="totalrank-img">
+      <img src="totalRequation.png" alt="Total Readiness Score formula and weights" class="totalrank-img">
+    </div>
+    <p>Total Green Workforce Readiness Score ranking and formula.</p>
   </figure>
 
   <!-- Natural Gas -->
@@ -191,6 +208,19 @@
       <img src="nuclear_power_production_map.png" alt="Nuclear map"/>
     </div>
     <p>Preliminary visualizations created with Python in Jupyter Notebook. Data Source: U.S. Energy Information Administration, State Energy Data System.</p>
+  </figure>
+
+  <!-- ======= POWER BI DASHBOARDS AFTER ======= -->
+  <h1>Salary Analysis Dashboard</h1>
+  <figure>
+    <figcaption>✽Salary Analysis Dashboard✽</figcaption>
+    <iframe
+      class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true"
+      title="Salary Analysis Dashboard">
+    </iframe>
+    <p>Assess salary data through key demographics.</p>
   </figure>
 
   <!-- More Power BI embeds -->
