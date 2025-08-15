@@ -48,16 +48,6 @@
       margin: 20px auto;
       max-width: 90%;
     }
-    figcaption {
-      background-color: #333;
-      color: #E6DBD0;
-      padding: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 10px;
-      text-align: center;
-      border-radius: 8px;
-    }
 
     /* Power BI embeds */
     .embed-frame {
@@ -174,9 +164,7 @@
       <img src="BIVARIATE MAP.png" alt="Bivariate map: skill transferability vs renewable infrastructure" class="bivariate-map-padded">
     </div>
     <p>
-      Bivariate choropleth of state readiness. States are placed on a 3×3 grid using
-      Skill Transferability and Renewable Infrastructure (ACS 2022 fields of degree; EIA SEDS 2022).
-      Darker tones indicate co-location of skills and green capacity.
+      Bivariate choropleth map. Darker tones indicate co-location of skills and green capacity.
     </p>
   </figure>
 
@@ -186,8 +174,7 @@
       <img src="Scatterplot.png" alt="Scatterplot visualization" class="scatterplot-padded">
     </div>
     <p>
-      State scatter of Skill Transferability (x) vs Renewable Infrastructure (y). The 45° guide helps
-      identify states that need workforce development versus infrastructure investment.
+      State scatter plot. Helps identify states that need workforce development versus infrastructure investment.
     </p>
   </figure>
 
@@ -198,16 +185,14 @@
       <img src="totalRequation.png" alt="Total Readiness Score formula and weights" class="totalrank-img">
     </div>
     <p>
-      Composite Readiness Score uses normalized components with weights:
-      Renewable Infrastructure 0.35, Skill Transferability 0.30, Education Alignment 0.20,
-      minus a 0.15 dampening factor for non-renewable production. An equal-weight spec is used for sensitivity.
+      Normalized Composite Readiness Score
     </p>
   </figure>
 
   <!-- ======= POWER BI DASHBOARDS AFTER ======= -->
   <h1>POWER BI</h1>
+
   <figure>
-    <figcaption>✽Salary Analysis Dashboard✽</figcaption>
     <iframe
       class="embed-frame"
       src="https://app.powerbi.com/view?r=eyJrIjoiYWE2YTk0MmYtNzM0ZS00ZDUxLWIxMWItOTlhNjFiMjc0YTA1IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
@@ -218,44 +203,58 @@
   </figure>
 
   <figure>
-    <figcaption>✽Wine Sales Analytics✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Wine Sales Analytics"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiZDFjNjlmN2EtNTViMS00NzBhLThjZjYtMjY4NTk0ZjMyMDkxIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Wine Sales Analytics">
+    </iframe>
     <p>Insights on wine sales data by country.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Mobile Access Visual✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Mobile Access"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMWNmNDZhZGUtNTNjYy00YmQyLWIzOWMtNjk0YjVhMjM5NjRiIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Mobile Access">
+    </iframe>
     <p>Representation of mobile access patterns by country.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Customer Demographics Dashboard✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Customer Demographics"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMWQ1YTdkMjgtNGYzNi00ZDQ1LTk5YmEtYjg5OGU1ZjZkNTFhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Customer Demographics">
+    </iframe>
     <p>Demographic data for better customer understanding.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Credit Risk Charts✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Credit Risk"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiYjAzM2JkNWQtNmY0Yy00NTRhLWE0ZjQtYTUzZTM1NGI3MDNhIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Credit Risk">
+    </iframe>
     <p>Assess credit risk through key demographics.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Air B&B✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 1"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNzAwMGNmYjEtNTFhNi00YjE3LThiODgtMjVkZjMzN2Y3YzFlIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Airbnb 1">
+    </iframe>
     <p>The graph displaying the average of prices and count of reviews by district offers a concise overview of both economic performance and guest satisfaction.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Air B&B✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 2"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiZWI5Y2FjN2ItNDQzMy00MzQ5LWI1MWEtNmEwZTg2YTZjNjliIiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Airbnb 2">
+    </iframe>
     <p>This graph illustrates the count of availability across various months and years, highlighting trends in availability over time.</p>
   </figure>
 
   <figure>
-    <figcaption>✽Air B&B✽</figcaption>
-    <iframe class="embed-frame" src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9" allowfullscreen="true" title="Airbnb 3"></iframe>
+    <iframe class="embed-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiYTVkM2JlMzYtMGVkNS00ZTc5LTlmZTMtMDUxY2FjNjBjMmI4IiwidCI6IjA1MDRmNzIxLWQ0NTEtNDAyYi1iODg0LTM4MTQyODU1OWUzOSIsImMiOjh9"
+      allowfullscreen="true" title="Airbnb 3">
+    </iframe>
     <p>This graph is a key tool for evaluating host performance, revealing correlations between review counts and popularity.</p>
   </figure>
 
